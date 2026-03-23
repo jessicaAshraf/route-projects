@@ -65,7 +65,7 @@ export default function Post({post,comments, showMoreComments = true}) {
       <span className="mr-2">
        <img src={commentIcon} className='w-5' alt="" />
       </span>
-      <span className="text-lg font-bold">34</span>
+      <span className="text-lg font-bold">{post.likesCount}</span>
     </span>
   </div>
   

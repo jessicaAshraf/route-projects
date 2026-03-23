@@ -1,7 +1,7 @@
 import axios from "axios";
 
 class ApiServices {
-  token = null;
+  token = localStorage.getItem("token");
 
   setToken(token) {
     this.token = token;
@@ -69,6 +69,13 @@ class ApiServices {
     });
   }
 
+// async createPost(formData){
+//   const {data}=await axios.post(`${import.meta.env.VITE_BASE_URL}/posts`,formData, {
+//       headers: { 
+//         Authorization: `Bearer ${this.token}`}})
+//   return data;
+      
+// }
 
   async createComment(postId, commentData) {
     if (!this.token) throw new Error("Token not set!");
